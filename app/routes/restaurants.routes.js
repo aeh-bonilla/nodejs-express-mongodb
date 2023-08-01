@@ -9,6 +9,15 @@ module.exports = app => {
   // Retrieve all Restaurant
   router.get("/", restaurants.findAll);
 
+  // Retrieve Restaurant by name
+  router.get("/name", restaurants.findByName);
+
+  // Retrieve Restaurant by cuisine
+  router.get("/cuisine", restaurants.findByCuisine);
+
+  // Retrieve Restaurant by name & cuisine
+  router.get("/filtered", restaurants.findByNameAndCuisine);
+
   // Retrieve a single Restaurant with id
   router.get("/:id", restaurants.findOne);
 
